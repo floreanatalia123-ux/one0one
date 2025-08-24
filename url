@@ -1,0 +1,255 @@
+ONE-O-ONE – Formular înscriere (pachet complet)
+
+Fișiere incluse:
+1) index-branded-email-thankyou-logo.html – Formularul cu logo, email setat și redirect spre thankyou-with-logo.html
+2) thankyou-with-logo.html – Pagina de mulțumire branduită cu logo și buton “Înapoi la formular”
+3) Logo 1.JPG – Logo-ul folosit în pagini
+
+Cum se folosește:
+• Pune toate fișierele în același folder pe calculator, website sau hosting (ex: public_html/).
+• Deschide în browser fișierul index-branded-email-thankyou-logo.html și copiază linkul pentru părinți.
+• Asigură-te că fișierele se află împreună (formularul face redirect către thankyou-with-logo.html).
+• Răspunsurile trimise prin formular ajung la: centruldedezvoltare101@yahoo.com.
+
+Dacă vrei să redenumești fișierele (ex: index.html), actualizează și linkurile în codul HTML (valoarea câmpului _next).
+
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulțumim!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fceabb, #f8b500);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            max-width: 500px;
+        }
+        img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #27ae60;
+        }
+        p {
+            font-size: 18px;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            background: #00c3ff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Logo 1.JPG" alt="One-O-One Logo">
+        <h1>✨ Mulțumim pentru înscriere! ✨</h1>
+        <p>Formularul a fost trimis cu succes.<br>Ne vom contacta în curând pentru detalii suplimentare.</p>
+        <p>💚 Echipa One-O-One 💚</p>
+        <a class="button" href="index-branded-email-thankyou.html">⟵ Înapoi la formular</a>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Înscriere Program Prelungit – One-O-One</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0; padding: 0; background: #fefefe; color: #111;
+    }
+    header {
+      background: linear-gradient(135deg, #00c3ff, #ffff1c, #ff7eb3, #7afcff);
+      color: #fff; padding: 28px 18px; text-align: center;
+    }
+    header img {
+      max-height: 80px; margin-bottom: 10px;
+    }
+    header h1 { margin: 0 0 6px; font-size: 1.8rem; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.2); }
+    header p { margin: 0; font-weight: 500; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.2); }
+    .wrap { max-width: 860px; margin: 24px auto; padding: 0 16px; }
+    form {
+      background: #fff; border-radius: 14px; padding: 20px;
+      border: 2px solid #ff7eb3;
+      box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    }
+    .grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    .grid-1 { grid-template-columns: 1fr; }
+    label { font-weight: 600; font-size: .95rem; margin-bottom: 6px; display: block; }
+    input, select, textarea {
+      width: 100%; border: 1px solid #d0d5dd; border-radius: 10px;
+      padding: 10px 12px; font-size: 1rem; background: #fff;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .req { color: #d64545; }
+    .section-title {
+      margin: 20px 0 10px; font-weight: 700; font-size: 1.1rem; color: #ff5e99;
+      border-left: 5px solid #00c3ff; padding-left: 8px;
+    }
+    .row { margin-bottom: 10px; }
+    .checkbox { display: flex; gap: 10px; align-items: flex-start; }
+    .checkbox input[type="checkbox"] { width: 20px; height: 20px; margin-top: 3px; }
+    button {
+      width: 100%; padding: 12px 16px; border: 0; border-radius: 12px;
+      background: linear-gradient(90deg, #00c3ff, #ff7eb3);
+      color: #fff; font-size: 1.05rem; font-weight: 700;
+      cursor: pointer; transition: .2s ease;
+      margin-top: 10px;
+    }
+    button:hover { filter: brightness(.95); transform: translateY(-1px); }
+    footer { text-align: center; font-size: .85rem; color: #555; margin-top: 14px; }
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo 1.JPG" alt="One-O-One Logo" style="max-height:80px;margin-bottom:12px;">
+    <img src="Logo1.JPG" alt="One-O-One Logo">
+    <h1>Înscriere – Program Prelungit One-O-One</h1>
+    <p>Orar: 12:00 – 17:30 • Din 1 septembrie • Gustare inclusă</p>
+  </header>
+
+  <div class="wrap">
+    <form action="https://formsubmit.co/centruldedezvoltare101@yahoo.com" method="POST">
+      <input type="hidden" name="_next" value="thankyou.html">
+      <input type="hidden" name="_subject" value="Înscriere nouă – Program Prelungit One-O-One">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="section-title">Date copil</div>
+      <div class="grid">
+        <div class="row">
+          <label for="nume-copil">Nume și prenume copil <span class="req">*</span></label>
+          <input id="nume-copil" name="Nume copil" type="text" required>
+        </div>
+        <div class="row">
+          <label for="dob">Data nașterii <span class="req">*</span></label>
+          <input id="dob" name="Data nașterii" type="date" required>
+        </div>
+        <div class="row">
+          <label for="scoala">Școala <span class="req">*</span></label>
+          <input id="scoala" name="Școala" type="text" required>
+        </div>
+        <div class="row">
+          <label for="clasa">Clasa <span class="req">*</span></label>
+          <input id="clasa" name="Clasa" type="text" required>
+        </div>
+      </div>
+
+      <div class="section-title">Date părinte</div>
+      <div class="grid">
+        <div class="row">
+          <label for="parinte">Nume părinte <span class="req">*</span></label>
+          <input id="parinte" name="Părinte" type="text" required>
+        </div>
+        <div class="row">
+          <label for="telefon">Telefon (WhatsApp) <span class="req">*</span></label>
+          <input id="telefon" name="Telefon" type="tel" required>
+        </div>
+        <div class="row">
+          <label for="email">E-mail <span class="req">*</span></label>
+          <input id="email" name="Email" type="email" required>
+        </div>
+        <div class="row">
+          <label for="contact-preferat">Contact preferat</label>
+          <select id="contact-preferat" name="Contact preferat">
+            <option>Telefon</option>
+            <option>WhatsApp</option>
+            <option>Email</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section-title">Program & logistică</div>
+      <div class="grid">
+        <div class="row">
+          <label for="data-start">Data începerii <span class="req">*</span></label>
+          <input id="data-start" name="Data începerii" type="date" required>
+        </div>
+        <div class="row">
+          <label for="zile">Zile de participare <span class="req">*</span></label>
+          <select id="zile" name="Zile de participare" required>
+            <option>Zilnic (Luni–Vineri)</option>
+            <option>3 zile / săptămână</option>
+            <option>Altă variantă</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="taxa">Taxă pachet ales <span class="req">*</span></label>
+          <select id="taxa" name="Taxă pachet" required>
+            <option>Lunar</option>
+            <option>Săptămânal</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="reducere">Reducere frați</label>
+          <select id="reducere" name="Reducere frați">
+            <option>Nu</option>
+            <option>Da</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="plata">Metodă de plată</label>
+          <select id="plata" name="Metodă de plată">
+            <option>Cash</option>
+            <option>Transfer bancar</option>
+            <option>Card</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section-title">Sănătate & alimentație</div>
+      <div class="grid-1 grid">
+        <div class="row">
+          <label for="alergii">Alergii / restricții</label>
+          <textarea id="alergii" name="Alergii"></textarea>
+        </div>
+      </div>
+
+      <div class="section-title">Acorduri</div>
+      <div class="grid-1 grid">
+        <div class="row checkbox">
+          <input id="acord-date" type="checkbox" name="Acord date" required>
+          <label for="acord-date">Sunt de acord cu prelucrarea datelor. <span class="req">*</span></label>
+        </div>
+      </div>
+
+      <button type="submit">Trimite înscrierea</button>
+      <footer>
+        One-O-One • Tel: 078807302 • Locație: Bubuieci • Gustare inclusă
+      </footer>
+    </form>
+  </div>
+</body>
+</html>
